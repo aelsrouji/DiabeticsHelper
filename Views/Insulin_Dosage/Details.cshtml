@@ -1,0 +1,42 @@
+﻿@model DiabeticsHelper.Insulin_Dosage
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Insulin_Dosage</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Insulin_Dosage1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Insulin_Dosage1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Blood_Sugar_Range.Blood_Sugar_Range_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Blood_Sugar_Range.Blood_Sugar_Range_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.First_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.First_Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

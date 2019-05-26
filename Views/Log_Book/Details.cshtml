@@ -1,0 +1,66 @@
+﻿@model DiabeticsHelper.Log_Book
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Log_Book</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Log_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Log_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Log_Time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Log_Time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Meter_Reading)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Meter_Reading)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Log_Notes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Log_Notes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Meal_Routine.Routine_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Meal_Routine.Routine_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.First_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.First_Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

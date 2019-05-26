@@ -1,0 +1,45 @@
+﻿@model IEnumerable<DiabeticsHelper.Insulin_Dosage>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Insulin_Dosage1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Blood_Sugar_Range.Blood_Sugar_Range_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.User.First_Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Insulin_Dosage1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Blood_Sugar_Range.Blood_Sugar_Range_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.First_Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
